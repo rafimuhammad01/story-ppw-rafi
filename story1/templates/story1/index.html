@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <title>Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'story1/style.css' %}">
+</head>
+<body>
+    <nav>
+        <a> My Profile! </a>
+    </nav>
+
+    <div class='konten'>
+        <div class="header">
+            <img id='foto' src="{% static 'story1/Mask Group.png' %}" alt="My Image">
+
+            <div class="deskripsiDiri">
+                <p id="hello">Hello! I’m Rafi Muhammad </p>
+                <p id='desc'>I am a second year student at Faculty of Computer Science, University of Indonesia. <br> Currently interested with Artificial Intelligence, Data Science, Cyber Security and Software Engineering. <br> Also love art especially filmmaking and I do just for hobby. </p>
+            </div>
+
+        </div>
+        
+
+        <div class='box'>
+            <div id='dataDiri'>
+                <div class='judul'>
+                    Biodata
+                </div>
+                <div class='isi'>
+                    Nama : Rafi Muhammad <br>
+                    <br>
+                    NPM : 1906398603 <br>
+                    <br>
+                    Angkatan : Maung 2019 <br>
+                    <br>
+                    Hobi : Film <br>
+                    <br>
+                    Tempat Kuliah : Universitas Indonesia 
+                </div>
+                
+            </div>
+            <div id='riwayat'>
+                <div class='judul'> Education </div>
+                <div class='isi'>
+                    <b> Universitas Indonesia - </b> <i>Bachelor of Computer Science</i>  <br>
+                    <p>2019 - Present</p>  <br>
+                    <br>
+                    <b> SMA Negeri 103 Jakarta - </b>  <i>Mathematics and Science</i>  <br>
+                    <p>2016 - 2019</p>  <br>
+                    <br>
+                    <b>SMP Negeri 256 Jakarta</b>  <br>
+                    <p>2013 - 2016</p>  <br>
+                    <br>
+
+                </div>
+               
+
+            </div>
+        </div>
+
+
+        <div class='contactMe'>
+            <p>Contact Me : </p>
+            <a href="https://www.linkedin.com/in/rafi-muhammad-b89b30198/"><img src="{% static 'story1/linkedin 1.png' %}" alt="Linkedin" href=''></a>
+            <a href="https://www.instagram.com/rafimuhammad01/"><img src="{% static 'story1/instagram 1.png' %}" alt="Instagram"></a>
+            
+        </div>
+        <br>
+
+        <hr>
+
+    </div>
+        
+    
+</body>
+</html>
