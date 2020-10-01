@@ -91,3 +91,7 @@ ul {
 
 body { padding-top: 53px; }
 
+html {
+    scroll-behavior: smooth;
+}
+

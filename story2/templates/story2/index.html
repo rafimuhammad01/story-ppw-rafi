@@ -14,8 +14,7 @@
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="{% static 'story2/style.css' %}">
 
-    <!-- JavaScript -->
-    <script src="{% static 'story2/script.js' %}"></script>
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -25,26 +24,28 @@
     <nav class='navbar navbar-expand navbar-custom fixed-top'>
         <ul class='nav navbar-nav' style="margin-left:auto">
             <li class='nav-item'>
-                <a href="#" class='nav-link'> About </a>
+                <a href="#"  class='nav-link'> About </a>
             </li>
             <li class='nav-item'>
-                <a href="#" class='nav-link'> Skills </a>
+                <a href="#skills" class='nav-link page-scroll'> Skills </a>
             </li>
             <li class='nav-item'>
-                <a href="#" class='nav-link'> Experience </a>
+                <a href="#experience"  class='nav-link page-scroll'> Experience </a>
             </li>
             <li class='nav-item'>
-                <a href="#" class='nav-link'> Education </a>
+                <a href="#education"  class='nav-link page-scroll'> Education </a>
             </li>
             <li class='nav-item'>
-                <a href="#" class='nav-link'> Projects </a>
+                <a href="#projects"  class='nav-link page-scroll'> Projects </a>
             </li>  
         </ul>
+        
+        
     </nav>
 
 
     <!--Heading-->
-        <div class="container-fluid text-center" style="min-height: 100vh; background-color:#E9ECEF ;">
+        <div class="container-fluid text-center" style="background-color:#E9ECEF ; min-height: 100vh;">
             <div class="row justify-content-center" >
                 <div class="col-12 col-xl-4 col-md-6 mb-4 mb-md-0" style=" padding-top: 150px;">
                     <img src="{% static 'story2/Mask Group.png' %}" alt="">
@@ -52,7 +53,7 @@
                 <div class='col-12 col-xl-4 col-md-6' style="text-align: left; padding-top:10%; ">
                     <h1>Hello, I'm Rafi Muhammad</h1>
                     <p>I am a second year student at Faculty of Computer Science, University of Indonesia. Currently interested with Artificial Intelligence, Data Science, Cyber Security and Software Engineering. Also love art especially filmmaking and I do just for hobby. </p>
-                    <button type="button" class="btn btn-dark">Explore me!</button>
+                    <button id='explore' type="button" class="btn btn-dark">Explore me!</button>
                     
                 </div>
             </div>
@@ -62,222 +63,240 @@
         
 
     <!--Skills-->
-    <div class="container text-center">
-        <div class="row">
-            <div class='col col-md-12' style="padding-top:5%; padding-bottom: 0px;">
-                <h1>Skills</h1>
+    <div id='skills'>
+        <div class="container text-center">
+            <div class="row">
+                <div class='col col-md-12' style="padding-top:5%; padding-bottom: 0px;">
+                    <h1>Skills</h1>
+                </div>
             </div>
-        </div>
-
+    
+            
+    
+            <div class="border border-light">
+                <h1 style="text-align: left; font-size: large; padding-bottom: 3%; padding-top:3% ">Programing langugae</h1>
+                <div class='row justify-content-center' style="padding-bottom: 5% ;">
+                    <div class='col col-md-3'>
+                        <h3>Python</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:70%"></div>
+                        </div>
+                        <p style="text-align: right;">70%</p>
+                    </div>
         
-
-        <div class="border border-light">
-            <h1 style="text-align: left; font-size: large; padding-bottom: 3%; padding-top:3% ">Programing langugae</h1>
-            <div class='row justify-content-center' style="padding-bottom: 5% ;">
-                <div class='col col-md-3'>
-                    <h3>Python</h3>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:70%"></div>
+                    <div class='col col-md-3'>
+                        <h3>Java</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:70%"></div>
+                            
+                        </div>
+                        <p style="text-align: right;">70%</p>
                     </div>
-                    <p style="text-align: right;">70%</p>
+        
+                    <div class='col col-md-3'>
+                        <h3>R</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:40%"></div>
+                        </div>
+                        <p style="text-align: right;">40%</p>
+                    </div>
                 </div>
+            </div>
     
-                <div class='col col-md-3'>
-                    <h3>Java</h3>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:70%"></div>
-                        
+            <div class="border border-light">
+                <h1 style="text-align: left; font-size: large; padding-bottom: 3%; padding-top:3%">Frameworks</h1>
+                <div class='row justify-content-center' style="padding-bottom: 5% ;">
+                    <div class='col col-md-3'>
+                        <h3>Django</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:50%"></div>
+                            
+                        </div>
+                        <p style="text-align: right;">50%</p>
                     </div>
-                    <p style="text-align: right;">70%</p>
-                </div>
+                    
+                    <div class='col col-md-3'>
+                        <h3>Pandas</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:40%"></div>
+                            
+                        </div>
+                        <p style="text-align: right;">40%</p>
+                    </div>
     
-                <div class='col col-md-3'>
-                    <h3>R</h3>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:40%"></div>
+                    <div class='col col-md-3'>
+                        <h3>NumPy</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:40%"></div>
+                            
+                        </div>
+                        <p style="text-align: right;">40%</p>
                     </div>
-                    <p style="text-align: right;">40%</p>
+    
+                    <div class='col col-md-3'>
+                        <h3>Seaborn</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:40%"></div>
+                            
+                        </div>
+                        <p style="text-align: right;">40%</p>
+                    </div>
+    
+                    <div class='col col-md-3'>
+                        <h3>Scikit-Learn</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:40%"></div>
+                            
+                        </div>
+                        <p style="text-align: right;">40%</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="border border-light">
+                <h1 style="text-align: left; font-size: large; padding-bottom: 3%; padding-top:3%">Other</h1>
+                <div class='row justify-content-center' style="padding-bottom: 5% ;">
+                    <div class='col col-md-3'>
+                        <h3>Adobe Premiere Pro</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:70%"></div>
+                            
+                        </div>
+                        <p style="text-align: right;">70%</p>
+                    </div>
+    
+                    <div class='col col-md-3'>
+                        <h3>Adobe After Effect</h3>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:50%"></div>
+                            
+                        </div>
+                        <p style="text-align: right;">50%</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="border border-light">
-            <h1 style="text-align: left; font-size: large; padding-bottom: 3%; padding-top:3%">Frameworks</h1>
-            <div class='row justify-content-center' style="padding-bottom: 5% ;">
-                <div class='col col-md-3'>
-                    <h3>Django</h3>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:50%"></div>
-                        
-                    </div>
-                    <p style="text-align: right;">50%</p>
-                </div>
-                
-                <div class='col col-md-3'>
-                    <h3>Pandas</h3>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:40%"></div>
-                        
-                    </div>
-                    <p style="text-align: right;">40%</p>
-                </div>
-
-                <div class='col col-md-3'>
-                    <h3>NumPy</h3>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:40%"></div>
-                        
-                    </div>
-                    <p style="text-align: right;">40%</p>
-                </div>
-
-                <div class='col col-md-3'>
-                    <h3>Seaborn</h3>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:40%"></div>
-                        
-                    </div>
-                    <p style="text-align: right;">40%</p>
-                </div>
-
-                <div class='col col-md-3'>
-                    <h3>Scikit-Learn</h3>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:40%"></div>
-                        
-                    </div>
-                    <p style="text-align: right;">40%</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="border border-light">
-            <h1 style="text-align: left; font-size: large; padding-bottom: 3%; padding-top:3%">Other</h1>
-            <div class='row justify-content-center' style="padding-bottom: 5% ;">
-                <div class='col col-md-3'>
-                    <h3>Adobe Premiere Pro</h3>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:70%"></div>
-                        
-                    </div>
-                    <p style="text-align: right;">70%</p>
-                </div>
-
-                <div class='col col-md-3'>
-                    <h3>Adobe After Effect</h3>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:50%"></div>
-                        
-                    </div>
-                    <p style="text-align: right;">50%</p>
-                </div>
-            </div>
-        </div>
     </div>
+    
     
     <hr>
 
     <!-- Experience & Organization-->
 
-    <div class="container text-center">
-        <div class="row">
-            <div class='col col-md-12' style="padding-top:5%; padding-bottom: 0px;">
-                <h1>Experience & Organization</h1>
+    <div id='experience'>
+        <div class="container text-center">
+            <div class="row">
+                <div class='col col-md-12' style="padding-top:5%; padding-bottom: 0px;">
+                    <h1>Experience & Organization</h1>
+                </div>
+            </div>
+    
+            <div class="border border-light">
+                <div class='row' style=" text-align: left;">
+                    <div class='col col-md-12'>
+                        <h1 style="text-align: left;font-size: x-large; padding-bottom: 0; padding-top:3%">Staff of Seminar - COMPFEST 2020</h1>
+                        <p> 2020 - Present </p>
+                        <p style="margin: 0%;">I'm responsible for creating seminar for Compfest talk </p>
+                        <ul>
+                            <li> Responsible for Cybersecurity Seminar</li>
+                            <li> Responsible for Artificial Intelligence Seminar</li>
+                        </ul> 
+                        <hr>  
+                    </div> 
+                              
+                </div>
+    
+                <div class='row' style=" text-align: left ;">
+                    <div class='col col-md-12'>
+                        <h1 style="text-align: left;font-size: x-large; padding-bottom: 0; padding-top:3%">Staff of Public Relation - FUKI 2020</h1>
+                        <p> 2020 - Present</p>
+                        <p style="margin: 0%;">I'm responsible for doing publications for FUKI </p>
+                        <ul>
+                            <li> Responsible for making publications captions</li>
+                            <li> Responsible for Rekursif event</li>
+                            <li> Responsible for Memoar event</li>
+                            <li> Responsible for Fuki Souvenir program</li>
+                        </ul> 
+                        <hr>  
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="border border-light">
-            <div class='row' style=" text-align: left;">
-                <div class='col col-md-12'>
-                    <h1 style="text-align: left;font-size: x-large; padding-bottom: 0; padding-top:3%">Staff of Seminar - COMPFEST 2020</h1>
-                    <p> 2020 - Present </p>
-                    <p style="margin: 0%;">I'm responsible for creating seminar for Compfest talk </p>
-                    <ul>
-                        <li> Responsible for Cybersecurity Seminar</li>
-                        <li> Responsible for Artificial Intelligence Seminar</li>
-                    </ul> 
-                    <hr>  
-                </div> 
+    </div>
+
+    <hr>
+
+    <div id="education">
+        <div class='container text-center'>
+            <div class="row">
+                <div class='col col-md-12' style="padding-top:5%; padding-bottom: 0px;">
+                    <h1>Education</h1>
+                </div>
+            </div>
+    
+            <div class="border border-light">
+                <div class='row' style=" text-align: left ;">
+    
+                    <div class='col-12 col-md-4' style="text-align:center">
+                        <img src="{% static 'story2/Signature_FASILKOMUI.png' %} " alt="Fasilkom UI" style="max-width:75% ;width: 250px; margin:5%; padding: 5%;">
+                    </div>
+    
+                    <div class='col-12 col-md-8'>
+                        <h1 style="text-align: left;font-size: x-large; padding-bottom: 0; padding-top:3%">Universitas Indonesia - <i>Bachelor of Computer Science</i> </h1>
+                        <p> 2020 - Present</p>
+                        <p style="margin: 0%;">I'm undergraduate computer science student at Faculty of Computer Science, University of Indonesia </p> 
                           
-            </div>
-
-            <div class='row' style=" text-align: left ;">
-                <div class='col col-md-12'>
-                    <h1 style="text-align: left;font-size: x-large; padding-bottom: 0; padding-top:3%">Staff of Public Relation - FUKI 2020</h1>
-                    <p> 2020 - Present</p>
-                    <p style="margin: 0%;">I'm responsible for doing publications for FUKI </p>
-                    <ul>
-                        <li> Responsible for making publications captions</li>
-                        <li> Responsible for Rekursif event</li>
-                        <li> Responsible for Memoar event</li>
-                        <li> Responsible for Fuki Souvenir program</li>
-                    </ul> 
-                    <hr>  
+                    </div>
+                    
                 </div>
+                <hr>
             </div>
+    
+    
         </div>
     </div>
+    
+        <hr>
 
-    <hr>
-
-    <div class='container text-center'>
-        <div class="row">
-            <div class='col col-md-12' style="padding-top:5%; padding-bottom: 0px;">
-                <h1>Education</h1>
+    <div id="projects">
+        <div class='container text-center'>
+            <div class="row">
+                <div class='col col-md-12' style="padding-top:5%; padding-bottom: 0px;">
+                    <h1>Side Projects</h1>
+                </div>
+            </div>
+    
+            <div class="border border-light">
+                <div class='row' style=" text-align: left ;">
+    
+                    <div class='col-12 col-md-12'>
+                        <h1 style="text-align: left;font-size: x-large; padding-bottom: 0; padding-top:3%">Jejak Alumni Sega - <i>Backend Engineer</i> </h1>
+                        <p style="margin: 0%;"> I'm making a website that contains data of 103 Highschool’s alumni that are related to the alumni next eduction, so it can be used for juniors who will graduate.
+                        </p>
+                        <hr>
+                    </div>
+                    
+                    <div class='col-12 col-md-12'>
+                        <h1 style="text-align: left;font-size: x-large; padding-bottom: 0; padding-top:3%">Teaser Video for Startup Weekend Indonesia - <i>Videographer</i> </h1>
+                        <p style="margin: 0%;">I'm making teaser video for Startup Weekend Indonesia</p>
+                        <a href="https://www.instagram.com/p/B_NH9vBA7xi/" > <b>See Projects</b> </a>
+                        <hr>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="border border-light">
-            <div class='row' style=" text-align: left ;">
-
-                <div class='col-12 col-md-4' style="text-align:center">
-                    <img src="{% static 'story2/Signature_FASILKOMUI.png' %} " alt="Fasilkom UI" style="max-width:75% ;width: 250px; margin:5%; padding: 5%;">
-                </div>
-
-                <div class='col-12 col-md-8'>
-                    <h1 style="text-align: left;font-size: x-large; padding-bottom: 0; padding-top:3%">Universitas Indonesia - <i>Bachelor of Computer Science</i> </h1>
-                    <p> 2020 - Present</p>
-                    <p style="margin: 0%;">I'm undergraduate computer science student at Faculty of Computer Science, University of Indonesia </p> 
-                      
-                </div>
-                
-            </div>
-            <hr>
-        </div>
-
-
+    
     </div>
+    
+        
 
-    <hr>
 
-    <div class='container text-center'>
-        <div class="row">
-            <div class='col col-md-12' style="padding-top:5%; padding-bottom: 0px;">
-                <h1>Side Projects</h1>
-            </div>
-        </div>
+    
+    
 
-        <div class="border border-light">
-            <div class='row' style=" text-align: left ;">
-
-                <div class='col-12 col-md-12'>
-                    <h1 style="text-align: left;font-size: x-large; padding-bottom: 0; padding-top:3%">Jejak Alumni Sega - <i>Backend Engineer</i> </h1>
-                    <p style="margin: 0%;"> I'm making a website that contains data of 103 Highschool’s alumni that are related to the alumni next eduction, so it can be used for juniors who will graduate.
-                    </p>
-                    <hr>
-                </div>
-                
-                <div class='col-12 col-md-12'>
-                    <h1 style="text-align: left;font-size: x-large; padding-bottom: 0; padding-top:3%">Teaser Video for Startup Weekend Indonesia - <i>Videographer</i> </h1>
-                    <p style="margin: 0%;">I'm making teaser video for Startup Weekend Indonesia</p>
-                    <a href="https://www.instagram.com/p/B_NH9vBA7xi/" > <b>See Projects</b> </a>
-                    <hr>
-                </div>
-            </div>
-        </div>
-    </div>
-
-   
+    
     <div class="container-fluid text-center" style="background-color: #F5EFEF;">
         <div class="row ">
             <div class="col-12 col-md-12">
@@ -300,7 +319,10 @@
     </div>
         
 
-    </div>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'story2\script.js' %}"></script>
     
 </body>
 </html>
