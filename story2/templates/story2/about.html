@@ -1,0 +1,70 @@
+{% extends 'story2/index.html'%}
+{% load static %}
+
+
+
+{% block title %}
+<title>About Me</title>
+{% endblock %}
+
+<body>
+
+    {% block content %}
+
+    <br>
+    <br>
+    
+    <div class='container text-center' style="min-height: 100vh;">
+    	<div class='row no-gutters justify-content-center'>
+    		<div class='"col-12 col-xl-4 col-md-6 mb-4 mb-md-0"'>
+    			<img src="{% static 'story2/JP41.jpg' %} " style="width: 75%; border-radius: 20px;">
+    		</div>
+
+    		<div class='col-12 col-xl-4 col-md-6' >
+    			<h1 style="margin: auto"> Hei! I'm Rafi Muhammad</h1>
+    			<p class="lead"> I am a second year student at Faculty of Computer Science, University of Indonesia. Currently interested with Artificial Intelligence, Data Science, Cyber Security and Software Engineering. Also love art especially filmmaking and I do just for hobby. </p>
+    		</div>
+
+    	</div>
+
+    </div>
+
+
+
+    <div class='container text-center'>
+    	<div class='row no-gutters justify-content-center'>
+    		<div class=col-12>
+    			<h1> Little Story About Me</h1>
+    			<hr style="width: 20%; margin: auto; border-top: 2px solid #000000;">
+    			<br>
+
+    		</div>
+    	</div>
+
+
+    	
+    	<div class='row'>
+    		<div class=col-12 style="text-align: left;">
+    			<p>
+    				I'm currently learning computer science at Faculty of Computer Science, University of Indonesia. When I first studying here, I had 0 knowledge about computer science. <br> <br>
+
+    				First semester, I learnt how to code, with Python for the basic, I'm not very good at first so my grade at Foundation Programming 1 is not really good. At that time, I learnt about Discrete Math for basic of programming logic, it was fun subject because it teach you how to think. <br><br>
+
+    				Second semester, I learnt Java. For me, Java is really great when it goes to OOP (Object-Oriented Programming), I understand the concept of OOP when I learn Java, even though I learn it too in Programming Foundation 1 which is using Python. <br><br>
+
+    				Third semester is a chaos, I learn about Data Structure and Algorithm and it is stressing me out, even though it is hard I must give my best at it because it is a foundation to be a Software Engineer, which is one of my career goal. Also I learn about how to making website using Python Django. This website actually part of the task of that subject. I also learn how to code in assembly language that I don't really like
+    			</p>
+    		</div>
+    	</div>
+
+    </div>
+
+    
+
+    {%endblock%}
+
+
+
+
+</body>
+</html>

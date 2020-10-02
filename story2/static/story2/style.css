@@ -95,3 +95,6 @@ html {
     scroll-behavior: smooth;
 }
 
+img {
+    border-radius: 20px;
+}
