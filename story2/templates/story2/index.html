@@ -1,3 +1,5 @@
+{% extends 'story4/base.html'%}
+
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
@@ -14,39 +16,41 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1cQRFi3dgfSVKpc1B9idTEuN3cBScszNHP9silYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     
+    {% block css %}
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="{% static 'story2/style.css' %}">
-
-    
-
+    {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
     <!--Navbar-->
     <nav class='navbar navbar-expand navbar-custom fixed-top'>
+        {% block navbar%}
         <ul class='nav navbar-nav' style="margin-left:auto">
+
             <li class='nav-item'>
-                <a href="{%url 'index' %}"  class='nav-link'> Home </a>
+                <a href="{%url 'story2:index' %}"  class='nav-link page-scroll'> Home </a>
+            </li>
+            
+            <li class='nav-item'>
+                <a href="{%url 'story2:about' %}"  class='nav-link'> About </a>
             </li>
 
             <li class='nav-item'>
-                <a href="{%url 'about' %}"  class='nav-link'> About </a>
-            </li>
-
-            <li class='nav-item'>
-                <a href="#skills" class='nav-link page-scroll'> Skills </a>
+                <a href="{%url 'story2:index' %}#skills" class='nav-link page-scroll'> Skills </a>
             </li>
             <li class='nav-item'>
-                <a href="#experience"  class='nav-link page-scroll'> Experience </a>
+                <a href="{%url 'story2:index' %}#experience"  class='nav-link page-scroll'> Experience </a>
             </li>
             <li class='nav-item'>
-                <a href="#education"  class='nav-link page-scroll'> Education </a>
+                <a href="{%url 'story2:index' %}#education"  class='nav-link page-scroll'> Education </a>
             </li>
             <li class='nav-item'>
-                <a href="#projects"  class='nav-link page-scroll'> Projects </a>
+                <a href="{%url 'story2:index' %}#projects"  class='nav-link page-scroll'> Projects </a>
             </li>  
         </ul>
+        {% endblock %}
         
         
     </nav>
@@ -305,32 +309,7 @@
     
 
     {% endblock %}    
-    <div class="container-fluid text-center" style="background-color: #F5EFEF;">
-        <div class="row ">
-            <div class="col-12 col-md-12">
-                <br>
-                <br>
-                <p>Contact Me!</p>
-                <h1>RAFI MUHAMMAD</h1>
-                <hr style="width: 20%; margin: auto; border-top: 2px solid #000000;">
-            </div>
-        </div>
-        <br>
-
-        <div class='row justify-content-center'>
-            <div style="margin: 1%; margin-bottom: 5%;"> <a href="https://www.linkedin.com/in/rafi-muhammad-b89b30198/"><img src="{% static 'story2/linkedin 1.png' %}" alt="" style="margin: 0%;"></a> </div>
-            <div style="margin: 1%;"><img src="{% static 'story2/gmail 1.png' %}" alt="" style="margin: 0%;"></a> </div>
-            <div style="margin: 1%;"> <a href="https://github.com/rafimuhammad01"> <img src="{% static 'story2/github-logo 1.png' %}" alt="" style="margin: 0%;"> </a> </div>
-            <br>
-            <br>
-        </div>
-    </div>
-        
-
-
-    <!-- JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{% static 'story2\script.js' %}"></script>
+    
     
 </body>
 </html>

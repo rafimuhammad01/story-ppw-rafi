@@ -1,19 +1,24 @@
+{% extends 'story4/base.html' %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 {% load static %}
 
 <head>
+    {% block title%}
     <title>Profile</title>
+    {% endblock %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
     <link rel="stylesheet" href="{% static 'story1/style.css' %}">
+    {% endblock %}
 </head>
 <body>
-    <nav>
-        <a> My Profile! </a>
-    </nav>
+    
 
+    {% block content %}
     <div class='konten'>
         <div class="header">
             <img id='foto' src="{% static 'story1/Mask Group.png' %}" alt="My Image">
@@ -49,13 +54,10 @@
                 <div class='isi'>
                     <b> Universitas Indonesia - </b> <i>Bachelor of Computer Science</i>  <br>
                     <p>2019 - Present</p>  <br>
-                    <br>
                     <b> SMA Negeri 103 Jakarta - </b>  <i>Mathematics and Science</i>  <br>
                     <p>2016 - 2019</p>  <br>
-                    <br>
                     <b>SMP Negeri 256 Jakarta</b>  <br>
                     <p>2013 - 2016</p>  <br>
-                    <br>
 
                 </div>
                
@@ -63,19 +65,12 @@
             </div>
         </div>
 
-
-        <div class='contactMe'>
-            <p>Contact Me : </p>
-            <a href="https://www.linkedin.com/in/rafi-muhammad-b89b30198/"><img src="{% static 'story1/linkedin 1.png' %}" alt="Linkedin" href=''></a>
-            <a href="https://www.instagram.com/rafimuhammad01/"><img src="{% static 'story1/instagram 1.png' %}" alt="Instagram"></a>
-            
-        </div>
         <br>
 
         <hr>
 
     </div>
         
-    
+    {% endblock %}
 </body>
 </html>

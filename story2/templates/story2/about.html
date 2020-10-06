@@ -7,6 +7,12 @@
 <title>About Me</title>
 {% endblock %}
 
+
+{% block css %}
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'story2/style.css' %}">
+{% endblock %}
+	
 <body>
 
     {% block content %}
@@ -16,13 +22,15 @@
     
     <div class='container text-center' style="min-height: 100vh;">
     	<div class='row no-gutters justify-content-center'>
-    		<div class='"col-12 col-xl-4 col-md-6 mb-4 mb-md-0"'>
-    			<img src="{% static 'story2/JP41.jpg' %} " style="width: 75%; border-radius: 20px;">
+    		<div class='"col-12 "'>
+				<img src="{% static 'story2/JP41.jpg' %} " style="width: 75%; border-radius: 20px; margin-bottom: 5%;">
+				
     		</div>
-
-    		<div class='col-12 col-xl-4 col-md-6' >
-    			<h1 style="margin: auto"> Hei! I'm Rafi Muhammad</h1>
-    			<p class="lead"> I am a second year student at Faculty of Computer Science, University of Indonesia. Currently interested with Artificial Intelligence, Data Science, Cyber Security and Software Engineering. Also love art especially filmmaking and I do just for hobby. </p>
+			
+    		<div class='col-12 ' >
+				<h1 style="margin: auto">Rafi Muhammad</h1>
+				<hr style="width: 20%; margin: auto; border-top: 2px solid #000000; margin-top: 2%; margin-bottom: 2%;">
+    			<p class="lead"> Computer Science Student </p>
     		</div>
 
     	</div>
@@ -52,10 +60,11 @@
 
     				Second semester, I learnt Java. For me, Java is really great when it goes to OOP (Object-Oriented Programming), I understand the concept of OOP when I learn Java, even though I learn it too in Programming Foundation 1 which is using Python. <br><br>
 
-    				Third semester is a chaos, I learn about Data Structure and Algorithm and it is stressing me out, even though it is hard I must give my best at it because it is a foundation to be a Software Engineer, which is one of my career goal. Also I learn about how to making website using Python Django. This website actually part of the task of that subject. I also learn how to code in assembly language that I don't really like
+    				Third semester is a chaos, I learn about Data Structure and Algorithm and it is stressing me out, even though it is hard I must give my best at it because it is a foundation to be a Software Engineer, which is one of my career goal. Also I learn about how to making website using Python Django. This website actually part of the task of that subject. I also learn how to code in assembly language that honestly, I don't really like it.
     			</p>
     		</div>
-    	</div>
+		</div>
+		<br>
 
     </div>
 
