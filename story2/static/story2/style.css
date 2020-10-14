@@ -97,3 +97,11 @@ html {
 img {
     border-radius: 20px;
 }
+
+a {
+    color :  #000000;
+}
+
+a:hover {
+    text-decoration: none;
+}

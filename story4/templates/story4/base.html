@@ -45,27 +45,33 @@
 
     {% block content %}
     {% endblock %}
-    
-    <div class="container-fluid text-center" style="background-color: #F5EFEF;">
-        <div class="row ">
-            <div class="col-12 col-md-12">
-                <br>
-                <br>
-                <p>Contact Me!</p>
-                <h1>RAFI MUHAMMAD</h1>
-                <hr style="width: 20%; margin: auto; border-top: 2px solid #000000;">
+    <footer class="footer">
+        <div class="container-fluid text-center" style="background-color: #F5EFEF;">
+            <div class="row ">
+                <div class="col-12 col-md-12">
+                    <br>
+                    <br>
+                    <p>Contact Me!</p>
+                    <h1>RAFI MUHAMMAD</h1>
+                    <hr style="width: 20%; margin: auto; border-top: 2px solid #000000;">
+                </div>
             </div>
-        </div>
-        <br>
+            <br>
+    
+            <div class='row justify-content-center'>
+                <div style="margin: 1%; margin-bottom: 5%;"> <a href="https://www.linkedin.com/in/rafi-muhammad-b89b30198/"><img src="{% static 'story2/linkedin 1.png' %}" alt="" style="margin: 0%;"></a> </div>
+                <div style="margin: 1%;"><img src="{% static 'story2/gmail 1.png' %}" alt="" style="margin: 0%;"></a> </div>
+                <div style="margin: 1%;"> <a href="https://github.com/rafimuhammad01"> <img src="{% static 'story2/github-logo 1.png' %}" alt="" style="margin: 0%;"> </a> </div>
+                <br>
+                <br>
+            </div>
 
-        <div class='row justify-content-center'>
-            <div style="margin: 1%; margin-bottom: 5%;"> <a href="https://www.linkedin.com/in/rafi-muhammad-b89b30198/"><img src="{% static 'story2/linkedin 1.png' %}" alt="" style="margin: 0%;"></a> </div>
-            <div style="margin: 1%;"><img src="{% static 'story2/gmail 1.png' %}" alt="" style="margin: 0%;"></a> </div>
-            <div style="margin: 1%;"> <a href="https://github.com/rafimuhammad01"> <img src="{% static 'story2/github-logo 1.png' %}" alt="" style="margin: 0%;"> </a> </div>
-            <br>
-            <br>
+        
+            
         </div>
-    </div>
+    </footer>
+        
+    
 
     <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

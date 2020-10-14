@@ -10,5 +10,6 @@ class MataKuliahForm(forms.ModelForm):
         fields = [
             'nama_matkul',
             'semester',
+            'sks',
             'deskripsi'
         ]

@@ -44,11 +44,7 @@
                                 {% for i in mataKuliah %}
 
                                     <div class='col-12 col-md-12'>
-                                        <h1 style="text-align: left;font-size: x-large; padding-bottom: 0; padding-top:3%">{{i.nama_matkul}}</h1>
-                                        <p> Semester {{i.semester}}</p>
-                                        <p style="margin: 0%;"> {{ i.deskripsi }} </p> <br>
-                                        <button type="submit" name="update" value="{{i.id}}" class="btn btn-dark">Update</button>
-                                        <button type="submit" name= "delete" value= "{{i.id}}" class="btn btn-dark">Delete</button>
+                                        <a href="{% url 'story5:detail' i.id %}" style="text-align: left;font-size: x-large; padding-bottom: 0; padding-top:3%; ">{{i.nama_matkul}}</a>
                                         <hr>
                                     </div>
                                 {% endfor %}
@@ -74,6 +70,12 @@
         </div>
     </div>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     
