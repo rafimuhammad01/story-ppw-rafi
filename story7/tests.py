@@ -27,3 +27,5 @@ class MainTestCase(TestCase):
         response = Client().get("/story7/")
         html_response = response.content.decode('utf8')
         self.assertIn("id='accordion'", html_response)
+
+        
