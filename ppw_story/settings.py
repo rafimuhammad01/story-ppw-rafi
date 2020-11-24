@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'story2',
     'story4',
     'story5',
-    "story6"
+    "story6",
+    "story7"
 ]
 
 MIDDLEWARE = [
@@ -142,5 +143,8 @@ STATIC_URL = '/static/'
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

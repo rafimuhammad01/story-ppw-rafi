@@ -1,0 +1,96 @@
+{% extends 'story4/base.html'%}
+
+<!DOCTYPE html>
+{% load static %}
+<head>
+    {% block title%}
+    <title>Story 7</title>
+    {% endblock %}
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1cQRFi3dgfSVKpc1B9idTEuN3cBScszNHP9silYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+
+    {% block css %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <script src="{% static 'story7/scripts.js' %}"></script> 
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'story2/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'story7/style.css' %}">
+
+    {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    {% block content %}
+    
+    <div class='container ' style="margin: 7% auto;">
+        <div class='row justify-text-center' style="margin: auto;">
+            <div class='col-12'>
+                <h1>Sumary</h1>
+            </div>
+        </div>
+        <br>
+        <div class='row'>
+            <div class="col-12 " >
+
+                <div id='accordion'>
+                    <div class='group'>
+                        <h3>Activity<i class="arrow up" ></i></h3>
+                        <div>
+                            <p>My main activity is of course going to college, every weekdays I have class to attend.</p>
+                        </div>
+                    </div>
+
+
+                    <div class='group'>
+                        <h3>Organization/Event <i class="arrow up" ></i></h3>
+                        <div>
+                            <ul>
+                                <li><p>COMPFEST 2020 - Staff of Seminar</p></li>
+                                <li><p>FUKI 2020 - Staff of Public Relation</p></li>
+                                <li><p>Open House Fasilkom UI 2020 - Staff of Event</p></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class='group'>
+                        <h3>Achievment <i class="arrow up" ></i></h3>
+                        <div>
+                            <p>Getting accepted to Universitas Indonesia is my biggest achievement. Can't wait to get another one</p>
+                        </div>
+                    </div>
+
+
+                    <div class='group'>
+                            <h3>Interest <i class="arrow up" ></i></h3>
+                        <div>
+                            <ul>
+                                <li><p>Artificial Intelligence</p></li> 
+                                <li><p>Data Science</p></li>
+                                <li><p>Software Engineering</p></li>
+                                <li><p>Film</p></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+</body>
+</html>
