@@ -18,10 +18,13 @@
     {% block css %}
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
 
     <script src="{% static 'story7/scripts.js' %}"></script> 
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="{% static 'story2/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'story7/style.css' %}">
 
     {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,10 +32,9 @@
 <body>
     {% block content %}
     
-    <div class='container text-center' style="margin: 7%;">
-        <div class='row'>
-            
-            <div class='col-12 '>
+    <div class='container ' style="margin: 7% auto;">
+        <div class='row justify-text-center' style="margin: auto;">
+            <div class='col-12'>
                 <h1>F.A.Q</h1>
             </div>
         </div>
@@ -41,25 +43,38 @@
             <div class="col-12 " >
 
                 <div id='accordion'>
-                    <h3>What is your name?</h3>
-                    <div>
-                        <p>My name is Rafi Muhammad</p>
+                    <div class='group'>
+                        <h3>What is your name?<i class="arrow up" ></i></h3>
+                        <div>
+                            <p>My name is Rafi Muhammad</p>
+                        </div>
                     </div>
 
-                    <h3>What is this project?</h3>
-                    <div>
-                        <p>This is just my assignment for web design & programming subject of my college</p>
+
+                    <div class='group'>
+                        <h3>What is this project? <i class="arrow up" ></i></h3>
+                        <div>
+                            <p>This is just my assignment for web design & programming subject of my college</p>
+                        </div>
                     </div>
 
-                    <h3>Can I rearrange the accordion?</h3>
-                    <div>
-                        <p>yes you can do it on your own by pressing arrow up button on this accordion</p>
+
+                    <div class='group'>
+                        <h3>Can I rearrange the accordion? <i class="arrow up" ></i></h3>
+                        <div>
+                            <p>yes you can do it on your own by pressing arrow up button on this accordion</p>
+                        </div>
                     </div>
 
-                    <h3>How did you do this?</h3>
-                    <div>
-                        <p>I'm using some javascript spesifically using JQuery. Anyway JQuery is part of this assignment. </p>
+
+                    <div class='group'>
+                            <h3>How did you do this? <i class="arrow up" ></i></h3>
+                        <div>
+                            <p>I'm using some javascript spesifically using JQuery. Anyway JQuery is part of this assignment. </p>
+                        </div>
                     </div>
+
+                    
                 </div>
 
             </div>
