@@ -16,23 +16,56 @@
     
 
     {% block css %}
-    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+
     <script src="{% static 'story7/scripts.js' %}"></script> 
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="{% static 'story2/style.css' %}">
+
     {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     {% block content %}
-    <h3>What is your name?</h3>
-    <p>My name is Rafi Muhammad</p>
-    <h3>What is this project?</h3>
-    <p>This is just my assignment for web design & programming subject of my college</p>
-    <h3>Can I rearrange the accordion?</h3>
-    <p>yes you can do it on your own by pressing arrow up button on this accordion</p>
-    <h3>How did you do this?</h3>
-    <p>I'm using some javascript spesifically using JQuery. Anyway JQuery is part of this assignment. </p>
+    
+    <div class='container text-center' style="margin: 7%;">
+        <div class='row'>
+            
+            <div class='col-12 '>
+                <h1>F.A.Q</h1>
+            </div>
+        </div>
+        <br>
+        <div class='row'>
+            <div class="col-12 " >
+
+                
+                    <h3>What is your name?</h3>
+                    <div>
+                        <p>My name is Rafi Muhammad</p>
+                    </div>
+
+                    <h3>What is this project?</h3>
+                    <div>
+                        <p>This is just my assignment for web design & programming subject of my college</p>
+                    </div>
+
+                    <h3>Can I rearrange the accordion?</h3>
+                    <div>
+                        <p>yes you can do it on your own by pressing arrow up button on this accordion</p>
+                    </div>
+
+                    <h3>How did you do this?</h3>
+                    <div>
+                        <p>I'm using some javascript spesifically using JQuery. Anyway JQuery is part of this assignment. </p>
+                    </div>
+                
+
+            </div>
+        </div>
+    </div>
+
     {% endblock %}
 </body>
 </html>
