@@ -21,3 +21,4 @@ class MainTestCase(TestCase):
         self.assertIn("What is your name?", html_response)
         self.assertIn("What is this project?", html_response)
         self.assertIn("Can I rearrange the accordion?", html_response)
+        self.assertIn("How did you do this?", html_response)
