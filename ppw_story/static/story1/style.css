@@ -1,0 +1,162 @@
+.contactMe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 10px;
+
+}
+
+.contactMe p {
+    font-weight: bold;
+    margin-left: 0ex;
+    font-size: small;
+}
+
+.contactMe img {
+    margin-left: 10px;
+    height: 20px;
+}
+
+hr {
+    margin-left: 5%;
+    margin-right: 5%;
+    border-width: thin;
+}
+
+.navbar-custom {
+    background-color: #7D0633;
+    margin: 0;
+    padding: 0;
+ 
+}
+
+.navbar-nav{
+    list-style-type: none;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    background-color: #7D0633;
+
+}
+
+.nav-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-color: #5c0426;
+    
+}
+.nav-link  {
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    
+    
+}
+.nav-link:hover{
+    color: rgba(240, 248, 255, 0.774)
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.konten {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    justify-content: center;
+}
+
+
+#foto {
+    display: flex;
+    width: 175px;
+    padding-top: 15px;
+    object-fit: cover
+}
+
+.deskripsiDiri {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#hello {
+    display: flex;
+    font-size: 200%;
+    margin-bottom:2% ;
+
+}
+
+#desc {
+    font-size: small;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 2%;
+    padding-left: 5%;
+    justify-content: space-evenly;
+    margin-right: 5%;
+    
+}
+
+#dataDiri {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    
+}
+
+.judul {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.isi {
+    padding: 6%;
+    background: #FFFFFF;
+    width: 350px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    font-size: small;
+}
+
+.isi p {
+    font-size: smaller;
+}
+
+#riwayat {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
