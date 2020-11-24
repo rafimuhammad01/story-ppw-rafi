@@ -15,17 +15,16 @@ class MainTestCase(TestCase):
         html_response = response.content.decode('utf8')
         self.assertIn("scripts.js", html_response)
 
-    def test_html(self) :
+    def test_content_html(self) :
         response = Client().get("/story7/")
         html_response = response.content.decode('utf8')
-        self.assertIn("What is your name?", html_response)
-        self.assertIn("What is this project?", html_response)
-        self.assertIn("Can I rearrange the accordion?", html_response)
-        self.assertIn("How did you do this?", html_response)
+        self.assertIn("Activity", html_response)
+        self.assertIn("Organization/Event", html_response)
+        self.assertIn("Achievment", html_response)
+        self.assertIn("Interest", html_response)
 
     def test_accordion(self) :
         response = Client().get("/story7/")
         html_response = response.content.decode('utf8')
         self.assertIn("id='accordion'", html_response)
 
-        
