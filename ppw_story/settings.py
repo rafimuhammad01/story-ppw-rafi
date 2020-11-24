@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'story2',
     'story4',
     'story5',
-    "story6"
+    "story6",
+    "story7"
 ]
 
 MIDDLEWARE = [
