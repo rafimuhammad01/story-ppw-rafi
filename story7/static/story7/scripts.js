@@ -1,4 +1,7 @@
-function testing() {
-    console.log('test')
-}
+$(document).ready(function(){
+
+    $("button").click(function(){
+        console.log('test')
+    })
   
+  });

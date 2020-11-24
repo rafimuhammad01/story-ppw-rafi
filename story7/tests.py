@@ -9,3 +9,15 @@ class MainTestCase(TestCase):
     def test_template(self) :
         response = Client().get("/story7/")
         self.assertTemplateUsed(response,"story7/index.html")
+
+    def test_import_javascript(self) :
+        response = Client().get("/story7/")
+        html_response = response.content.decode('utf8')
+        self.assertIn("scripts.js", html_response)
+
+    def test_html(self) :
+        response = Client().get("/story7/")
+        html_response = response.content.decode('utf8')
+        self.assertIn("What is your name?", html_response)
+        self.assertIn("What is this project?", html_response)
+        self.assertIn("Can I rearrange the accordion?", html_response)
