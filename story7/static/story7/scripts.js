@@ -9,17 +9,37 @@ $( function() {
         active: false,
         
       })
-      .sortable({
-        axis: "y",
-        handle: ".arrow",
-        stop: function( event, ui ) {
-          // IE doesn't register the blur when sorting
-          // so trigger focusout handlers to remove .ui-state-focus
-          ui.item.children( ".arrow" ).triggerHandler( "focusout" );
- 
-          // Refresh accordion to handle new order
-          $( this ).accordion( "refresh" );
-        }
+      
+    $('.down').click(function(e){
+      e.stopPropagation();
+      var id = $(this).closest('.group').attr('id')
 
-      });
+      if (id != 4) {
+        var idNext = parseInt(id)+1
+
+        $("#" + id).insertAfter($("#" + idNext))
+        $("#" + id).attr('id', idNext)
+        $("#" + idNext).attr('id', id)
+      } 
+      
+    });
+
+    $('.up').click(function(e){
+      e.stopPropagation();
+      var id = $(this).closest('.group').attr('id')
+
+      if (id != 1) {
+        var idPrev = parseInt(id)-1
+
+        $('#' + id).insertBefore("#" + idPrev)
+        $("#" + id).attr('id', 5)
+        $("#" + idPrev).attr('id', id)
+        $("#5").attr('id', idPrev)
+
+        console.log($("#accordion").html())
+        console.log(id)
+        console.log(idPrev)
+      }
+    });
+
   } );

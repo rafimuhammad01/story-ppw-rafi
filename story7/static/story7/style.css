@@ -53,6 +53,11 @@
     -webkit-transform: rotate(-135deg);
   }
 
+.down{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
 h3 {
     margin: 2%
 }
