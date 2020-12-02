@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'story4',
     'story5',
     "story6",
-    "story7"
+    "story7",
+    'story8'
 ]
 
 MIDDLEWARE = [
