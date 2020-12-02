@@ -12,4 +12,10 @@ class MainTestCase(TestCase):
         response = Client().get("/story8/data")
         self.assertEqual(response.status_code,200)
 
+    def test_search_bar(self) :
+        response = Client().get("/story8/")
+        html_response = response.content.decode('utf8')
+        self.assertIn("<input type='text'", html_response)
+
+
     
