@@ -24,4 +24,5 @@ urlpatterns = [
     path('story5/', include('story5.urls', namespace='story5')),
     path('story6/', include('story6.urls', namespace='story6')),
     path('story7/', include('story7.urls', namespace='story7')),
+    path('story7/', include('story8.urls', namespace='story8')),
 ]
