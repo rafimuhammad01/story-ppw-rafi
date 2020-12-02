@@ -20,9 +20,13 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
+    
+    
+    <script src="{% static 'story8/scripts.js' %}"></script> 
 
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="{% static 'story2/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'story8/style.css' %}">
 
     {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,12 +35,17 @@
     {% block content %}
 
     <div class='container text-center'>
-        <div class='row'>
+        <div class='row search'>
             <div class='col-12'>
-                <input type="text" placeholder="Search...">
+                <input id='searchbox' type="text" placeholder="Search..." value='' >
             </div>
         </div>
     </div>
+
+    <div id='content' class='container'>
+
+    </div>
+
 
     {% endblock %}
 </body>
