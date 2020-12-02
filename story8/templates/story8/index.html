@@ -1,0 +1,52 @@
+{% extends 'story4/base.html'%}
+
+<!DOCTYPE html>
+{% load static %}
+<head>
+    {% block title%}
+    <title>Story 8</title>
+    {% endblock %}
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1cQRFi3dgfSVKpc1B9idTEuN3cBScszNHP9silYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+
+    {% block css %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    
+    
+    <script src="{% static 'story8/scripts.js' %}"></script> 
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'story2/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'story8/style.css' %}">
+
+    {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    {% block content %}
+
+    <div class='container text-center'>
+        <div class='row search'>
+            <div class='col-12'>
+                <input id='searchbox' type="text" placeholder="Search..." value='' >
+            </div>
+        </div>
+    </div>
+
+    <div id='content' class='container'>
+
+    </div>
+
+
+    {% endblock %}
+</body>
+</html>
