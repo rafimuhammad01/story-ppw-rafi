@@ -30,6 +30,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <nav class='navbar navbar-expand navbar-custom fixed-top'>
+        {% block navbar%}
+        <ul class='nav navbar-nav' style="margin-left:auto">
+            {% if user.is_authenticated %}
+            <li class='nav-item'>
+                <a  class='nav-link page-scroll'> {{ user.username}} </a>
+            </li>
+            <li class='nav-item'>
+                <a href="{%url 'story9:logout' %}" class='nav-link page-scroll'> Log Out </a>
+            </li>
+            
+            
+            {% else %}
+
+            <li class='nav-item'>
+                <a href="{%url 'story9:login' %}"  class='nav-link page-scroll'> Login </a>
+            </li>
+
+            <li class='nav-item'>
+                <a href="{%url 'story9:signup' %}"  class='nav-link page-scroll'> Sign Up </a>
+            </li>
+            
+            {% endif %}
+        </ul>
+        {% endblock %}
+        
+        
+    </nav>
     {% block content %}
 
     <form action="" method="POST">
