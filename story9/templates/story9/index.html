@@ -31,7 +31,9 @@
 </head>
 <body>
     {% block content %}
-
+    {% if user.is_authenticated %}
+    <h1>hi, {{user.username}}</h1>
+    {% endif %}
 
 
     {% endblock %}
