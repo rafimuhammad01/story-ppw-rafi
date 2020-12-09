@@ -32,16 +32,47 @@
 <body>
     {% block content %}
 
-    {% if failed %}
-        <p>failed, {{ failed }}</p>
-    {% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        
+        <div class="container text-center">
+            <div class="row">
+                <div class='col col-md-12' style="padding-top:5%; padding-bottom: 0px;">
+                    <h1>Login</h1>
+                </div>
+            </div>
+
+            
+            
+            <div class="border border-light" style="padding: 5%; margin:5% auto; width: 400px;">
+                
+                {% if failed %}
+
+                <div class="alert alert-danger" role="alert">
+                    <p class=lead style='font-size:small; margin-bottom: 0;'> invalid username or password! </p> 
+                </div>
+
+                {% endif %}
+                <div class="row justify-content-center form-group " style="">
+                    <div class=col-12>
+                        <label for="username">Username:</label><br>
+                        <input type="text" class="form-control" name="username"><br>
+                        <label for="password">Password:</label><br>
+                        <input type="password" class="form-control" name="password"> <br>
+                        <button type="submit" name="login" value="login" class="btn btn-dark btn-block">Login</button>
+                    </div>                
+                </div>
+            </div>
+
+            
+        </div>
+    </form>
+    
+
+    
     <form action="" method=POST>
         {% csrf_token %}
-        <label for="username">Username:</label><br>
-        <input type="text" name="username"><br>
-        <label for="password">Password:</label><br>
-        <input type="password" name="password"> <br>
-        <button type="submit" name='login', value='login'>Login</button>
+        
     </form>
 
     {% endblock %}

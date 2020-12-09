@@ -9,6 +9,8 @@ def index(request) :
     return render(request, 'story9/index.html')
 
 def user_login(request) :
+    if request.user.is_authenticated:
+        return redirect('story9:index')
     if request.method == "POST" :
         username = request.POST['username']
         password = request.POST['password']

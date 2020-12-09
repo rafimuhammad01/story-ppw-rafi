@@ -4,7 +4,7 @@
 {% load static %}
 <head>
     {% block title%}
-    <title>Story 8</title>
+    <title>Story 9</title>
     {% endblock %}
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -30,9 +30,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <nav class='navbar navbar-expand navbar-custom fixed-top'>
+        {% block navbar%}
+        <ul class='nav navbar-nav' style="margin-left:auto">
+            {% if user.is_authenticated %}
+            <li class='nav-item'>
+                <a  class='nav-link page-scroll'> {{ user.username}} </a>
+            </li>
+            
+            
+            {% else %}
+
+            <li class='nav-item'>
+                <a href="{%url 'story9:login' %}"  class='nav-link page-scroll'> Login </a>
+            </li>
+            
+            {% endif %}
+        </ul>
+        {% endblock %}
+        
+        
+    </nav>
     {% block content %}
     {% if user.is_authenticated %}
-    <h1>hi, {{user.username}}</h1>
+
+    <div class="container-fluid text-center" style="background-color:#E9ECEF ; min-height: 100vh;">
+        <div class="row justify-content-center" >
+            <div class='col-12' style="text-align: center; padding-top:10%; ">
+                <h1>Hello, {{user.username}}</h1>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    {%else%}
+
+    <div class="container-fluid text-center" style="background-color:#E9ECEF ; min-height: 100vh;">
+        <div class="row justify-content-center" >
+            <div class='col-12' style="text-align: center; padding-top:10%; ">
+                <h1>Please Login</h1>
+            </div>
+        </div>
+        <br>
+    </div>
+    
     {% endif %}
 
 
