@@ -25,4 +25,16 @@ def user_login(request) :
     return render(request, 'story9/login.html')
 
 def user_signUp(request) :
-    return render(request, 'story9/signup.html')
+    form = UserCreationForm()
+
+    if request.method == "POST" :
+        form = UserCreationForm(request.POST)
+        if form.is_valid() :
+            form.save()
+            new_user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password1'],)
+            login(request, new_user)
+            return redirect('story9:login')
+
+
+    context = {'form' : form}
+    return render(request, 'story9/signup.html', context)

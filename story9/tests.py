@@ -26,7 +26,8 @@ class MainTestCase(TestCase):
         self.assertTemplateUsed(response,"story9/signup.html")
     
     def test_register(self) :
-        response = self.client.post("/story9/signup", data={'username' : 'testing', 'password1' : 'testing8888','password2' : 'testing8888', 'signup':"signup"}, follow=True)
+        response = self.client.post("/story9/signup", data={'username' : 'testing123123', 'password1' : 'testpassword123','password2' : 'testpassword123', 'signup':"signup"})
+        self.assertEqual(response.status_code,302)
         self.assertEqual(1, User.objects.count())
     
        

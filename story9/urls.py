@@ -6,4 +6,5 @@ app_name = "story8"
 urlpatterns = [
     path('', views.index, name='index'),
     path('login', views.user_login, name='login'),
+    path('signup', views.user_signUp, name='signup'),
 ]
