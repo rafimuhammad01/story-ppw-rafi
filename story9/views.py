@@ -26,6 +26,8 @@ def user_login(request) :
 
 def user_signUp(request) :
     form = UserCreationForm()
+    if request.user.is_authenticated:
+        return redirect('story9:index')
 
     if request.method == "POST" :
         form = UserCreationForm(request.POST)

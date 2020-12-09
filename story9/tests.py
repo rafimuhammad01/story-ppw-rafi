@@ -30,6 +30,10 @@ class MainTestCase(TestCase):
         self.assertEqual(response.status_code,302)
         self.assertEqual(1, User.objects.count())
     
+    def test_url_logout(self) :
+        response = Client().get("/story9/logout")
+        self.assertEqual(response.status_code,302)
+        self.assertEqual(False, response.user.is_authenticated)
        
 
 
