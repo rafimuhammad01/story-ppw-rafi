@@ -20,7 +20,6 @@ $(function() {
                 `)
                 
                 if(e.items != undefined) {
-                    console.log("masuk")
                     for (i = 0; i < e.items.length; i++) {
                         var title = e.items[i].volumeInfo.title;
                         var gambar = e.items[i].volumeInfo.imageLinks.smallThumbnail;

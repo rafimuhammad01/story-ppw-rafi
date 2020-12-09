@@ -1,0 +1,89 @@
+{% extends 'story4/base.html'%}
+
+<!DOCTYPE html>
+{% load static %}
+<head>
+    {% block title%}
+    <title>Story 9</title>
+    {% endblock %}
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1cQRFi3dgfSVKpc1B9idTEuN3cBScszNHP9silYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+
+    {% block css %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    
+    
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'story2/style.css' %}">
+
+    {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <nav class='navbar navbar-expand navbar-custom fixed-top'>
+        {% block navbar%}
+        <ul class='nav navbar-nav' style="margin-left:auto">
+            {% if user.is_authenticated %}
+            <li class='nav-item'>
+                <a  class='nav-link page-scroll'> {{ user.username}} </a>
+            </li>
+            <li class='nav-item'>
+                <a href="{%url 'story9:logout' %}" class='nav-link page-scroll'> Log Out </a>
+            </li>
+            
+            
+            {% else %}
+
+            <li class='nav-item'>
+                <a href="{%url 'story9:login' %}"  class='nav-link page-scroll'> Login </a>
+            </li>
+
+            <li class='nav-item'>
+                <a href="{%url 'story9:signup' %}"  class='nav-link page-scroll'> Sign Up </a>
+            </li>
+            
+            {% endif %}
+        </ul>
+        {% endblock %}
+        
+        
+    </nav>
+    {% block content %}
+    {% if user.is_authenticated %}
+
+    <div class="container-fluid text-center" style="background-color:#E9ECEF ; min-height: 100vh;">
+        <div class="row justify-content-center" >
+            <div class='col-12' style="text-align: center; padding-top:10%; ">
+                <h1>Hello, {{user.username}}</h1>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    {%else%}
+
+    <div class="container-fluid text-center" style="background-color:#E9ECEF ; min-height: 100vh;">
+        <div class="row justify-content-center" >
+            <div class='col-12' style="text-align: center; padding-top:10%; ">
+                <h1>Please Login</h1>
+            </div>
+        </div>
+        <br>
+    </div>
+    
+    {% endif %}
+
+
+    {% endblock %}
+</body>
+</html>
