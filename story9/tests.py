@@ -1,5 +1,6 @@
 from django.test import TestCase,Client
 from django.contrib.auth.models import User
+from django.contrib import auth
 
 # Create your tests here.
 class MainTestCase(TestCase):
@@ -33,7 +34,8 @@ class MainTestCase(TestCase):
     def test_url_logout(self) :
         response = Client().get("/story9/logout")
         self.assertEqual(response.status_code,302)
-        self.assertEqual(False, response.user.is_authenticated)
+        user = auth.get_user(self.client)
+        self.assertEqual(False, user.is_authenticated)
        
 
 

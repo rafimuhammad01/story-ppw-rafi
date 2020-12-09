@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 
 
@@ -37,6 +37,9 @@ def user_signUp(request) :
             login(request, new_user)
             return redirect('story9:login')
 
-
     context = {'form' : form}
     return render(request, 'story9/signup.html', context)
+
+def logout_user(request) :
+    logout(request)
+    return redirect('story9:index')
